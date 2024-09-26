@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h2>Snap!</h2>
+    <form name="myform" onsubmit="validateform()">
+        Name:<input type="text" name="fname">
+        <br><br>
+        Age:<input type="number" id="id1" min="18"><br><br>
+        Password:<input type="password" id="id2"><br><br>
+        <input type="submit" value="Login">
+    </form>
+    <script>
+        function validateform() {
+            var x = document.forms["myform"]
+            ["fname"].value;
+        
+            var y = document.forms["myform"]
+            ["id1"].value;
+            var x = document.forms["myform"]
+            ["id2"].value;
+            if (x == "") {
+                alert("The boxes must be filled")
+                return false;
+            }
+            else document.write("Login successful")
+        }
+    </script>
+</body>
+
+</html>
